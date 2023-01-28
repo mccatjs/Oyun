@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" manifest="cache.appcache">
+<head>
+  <meta charset="utf-8">
+  <title>8192</title>
+  <meta http-equiv="cache-control" content="max-age=0" />
+  <meta http-equiv="cache-control" content="no-cache" />
+  <meta http-equiv="expires" content="0" />
+  <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+  <meta http-equiv="pragma" content="no-cache" />
+
+  <link href="style/main.css" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="meta/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="format-detection" content="telephone=no" />
+
+  <meta property="og:title" content="8192 game"/>
+  <meta property="og:site_name" content="8192 game"/>
+  <meta property="og:description" content="Join the numbers and get to the 8192 tile! Careful: this game is extremely addictive!"/>
+  <meta property="og:image" content="http://gabrielecirulli.github.io/2048/meta/og_image.png"/>
+</head>
+<body>
+  <div class="container">
+    <div class="heading">
+      <h1 class="title">8192</h1>
+
+    </div>
+
+    <div class="above-game">
+      <p class="game-intro">Join the numbers and get to the <strong>8192 tile!</strong></p>
+      <a class="restart-button">New Game</a>
+
+    </div>
+
+
+    <div class="game-container game-size-six">
+      <div class="game-message">
+        <p></p>
+        <div class="lower">
+          <div class="main-menu">
+            <div>Size:
+              <a class="gamemode-size-four">4x4</a>
+              <a class="gamemode-size-five">5x5</a>
+              <a class="gamemode-size-six">6x6</a>
+            </div>
+            <div>Difficulty:
+              <a class="gamemode-difficulty-easy">Easy</a>
+              <a class="gamemode-difficulty-medium">Medium</a>
+              <a class="gamemode-difficulty-hard">Hard</a>
+            </div>
+            <div>Modes:
+              <a class="gamemode-add">Add</a>
+              <a class="gamemode-remove">Remove</a>
+            </div>
+          </div>
+          <div class="main-menu-lower">
+            <div>
+              <a class="keep-playing-button">Keep going</a>
+              <a class="begin-button">Begin New Game</a>
+            </div>
+            <div class="main-menu-lower">
+              <div class="score-sharing"></div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="game-header">
+        <span class="game-header-size">5x5</span> <span class="game-header-difficulty">medium</span> Mode (<span class="game-header-add">Add</span> | <span class="game-header-remove">Remove</span>)
+      </div>
+      <div class="info-pane">
+        <div class="info-item add-container add-timer-container">00:00</div>
+        <div class="info-item remove-container remove-timer-container">00:00</div>
+        <div class="info-item score-container">0</div>
+        <div class="info-item best-container">0</div>
+        <div class="info-item multiplier-container">1.0x</div>
+      </div>
+      <div class="grid-container"><div>Error</div>
+      </div>
+
+      <div class="tile-container">
+
+      </div>
+    </div>
+
+    <h3 class="title">How to play:</h3>
+    <hr>
+    <p class="game-explanation">
+      <strong class="important">Concept:</strong> The purpose of 8192 is to move the tiles. When two tiles with the same number touch, they <strong>merge into one!</strong> Get two 4096 tiles to merge, to get the winning tile of <strong>8192</strong>! Increase the difficulty, lower the grid size and enable the two game modes to make it harder!
+    </p>
+    <hr>
+    <p class="game-explanation">
+      <strong class="important">Controls:</strong> Use your <strong>arrow keys</strong> to move the tiles. On touch enabled devices you can swipe. You can also use W, A, S, and D in place of arrow keys.
+    </p>
+    <hr>
+    <p class="game-explanation">
+      <strong class="important">Difficulty Levels:</strong> The game has three game modes: <strong>easy</strong>, <strong>medium</strong>, and <strong>hard</strong>. Increasing the difficulty things harder, but also gives you a better multiplier.
+    </p>
+    <hr>
+    <p class="game-explanation">
+      <strong class="important">Multipier:</strong> Increasing the difficulty, changing the grid size and enabling game modes increases your multiplier. With a 3.0x multiplier, combining 2 and 2 (which would normally give you 4 points) would give you <strong>12 points instead!</strong> If the grid starts getting full, your multiplier will decrease - so try and keep the grid as empty as possible! 
+    </p>
+    <hr>
+    <p class="game-explanation">
+      <strong class="important">Game modes:</strong> 8192 has 2 additional game modes, and neither, one of them or both can be enabled in any single game. 
+    </p>
+    <p>
+      <strong>"Add mode"</strong> makes "X" tiles spawn when the "Add" timer gets to 00:00. In easy and medium game modes only one "X" tile is added, but in hard mode <strong>TWO</strong> "X" tiles are added every time! "X" tiles can be combined to make a "2" tile. Don't let the grid fill up with "X" tiles or you'll lose! "Add mode" increases your multiplier by <strong>1.0x!</strong>
+    </p>
+    <p>
+      <strong>"Remove mode"</strong> highlights a tile, and you must combine this tile with another tile of the same value before the timer counts down to 00:00. If you don't combine it in time, that tile will be deleted, and you'll lose all of it's points. If thats a "128" tile then you'll lose 128 points <strong>times by your multiplier!</strong> "Remove mode" increases your multiplier by <strong>1.0x!</strong>
+    </p>
+    <hr>
+    <p class="game-explanation">
+      <strong class="important">Grid sizes:</strong> There are three grid sizes available for the game: <strong>4x4</strong>, <strong>5x5</strong>, and <strong>6x6</strong>. The easiest grid size is 6x6, giving you the most space, and the hardest 4x4.
+    </p>
+    <hr>
+    <p>
+    Created by <a href="http://tomkent.me" target="_blank">Tom Kent</a> Based on <a href="http://gabrielecirulli.github.io/2048/">2048</a> and <a href="https://itunes.apple.com/us/app/1024!/id823499224" target="_blank">1024 by Veewo Studio</a> and conceptually similar to <a href="http://asherv.com/threes/" target="_blank">Threes by Asher Vollmer.</a>
+    </p>
+    <div class="sharing">
+      <a href="https://twitter.com/share" class="twitter-share-button" data-text="Check out 8192, a game where you join numbers to score high! #8192game" data-via="tomk1210" data-url="http://tommykent1210.github.io/8192/" data-counturl="http://tommykent1210.github.io/8192/">Tweet</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+
+
+    </div>
+  </div>
+
+  <script src="js/bind_polyfill.js"></script>
+  <script src="js/classlist_polyfill.js"></script>
+  <script src="js/animframe_polyfill.js"></script>
+  <script src="js/keyboard_input_manager.js"></script>
+  <script src="js/html_actuator.js"></script>
+  <script src="js/grid.js"></script>
+  <script src="js/tile.js"></script>
+  <script src="js/local_storage_manager.js"></script>
+  <script src="js/game_manager.js"></script>
+  <script src="js/application.js"></script>
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-43923041-5', 'tommykent1210.github.io');
+  ga('send', 'pageview');
+
+</script>
+  
+</body>
+</html>
